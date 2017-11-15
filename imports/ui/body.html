@@ -1,0 +1,28 @@
+<body>
+  <div class="container">
+    {{> loginButtons}}
+    <header>
+      <h1>Ticket List ({{incompleteCount}})</h1>
+      <label class="hide-completed">
+      <input type="checkbox" />
+      Hide Completed Ticket
+      </label>
+           {{#if currentUser}}
+           <form class="new-task">
+            <input type="text" name="text" placeholder="Type to add new ticket" />
+           </form>
+           {{/if}}
+      </header>
+
+    <ul>
+      {{#each tasks}}
+        {{> task}}
+      {{/each}}
+    </ul>
+  </div>
+</body>
+
+<!--
+<template name="task">
+  <li>{{text}}</li>
+</template> -->
