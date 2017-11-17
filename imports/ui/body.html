@@ -8,12 +8,21 @@
       Hide Completed Ticket
       </label>
            {{#if currentUser}}
-           <form class="new-task">
+           <!-- <form class="new-task">
             <input type="text" name="text" placeholder="Type to add new ticket" />
-           </form>
+           </form> -->
+           <div class="row">
+             <form class="new-task">
+               <div class="row">
+                 <div class="input-field col s12">
+                   <textarea type="text" name="text" rows="8" cols="69"></textarea>
+                   <button type="text" name="button">submit</button>
+                 </div>
+               </div>
+             </form>
+           </div>
            {{/if}}
       </header>
-
     <ul>
       {{#each tasks}}
         {{> task}}
